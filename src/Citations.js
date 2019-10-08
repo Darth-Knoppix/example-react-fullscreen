@@ -20,6 +20,27 @@ export default function Citations() {
       >
         Rhyne
       </a>
+      <h4 className="margin-bottom-small">
+        More from <a href="https://twitter.com/Darth_Knoppix">Seth Corker</a>
+      </h4>
+      <ul>
+        <li>
+          Read the blog post, "
+          <a href="https://blog.sethcorker.com/fullscreen-api/">
+            Using the Fullscreen API with React
+          </a>
+          "
+        </li>
+        <li>
+          Find <a href="https://dev.to/darthknoppix">me on dev.to</a>
+        </li>
+        <li>
+          Support me as a reader of{" "}
+          <a href="https://medium.com/front-end-field-guide">
+            Benevolent Bytes on Medium
+          </a>
+        </li>
+      </ul>
     </footer>
   );
 }
