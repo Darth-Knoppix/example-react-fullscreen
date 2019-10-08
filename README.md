@@ -1,6 +1,9 @@
+<img src="https://blog.sethcorker.com/content/images/size/w2000/2019/10/Medium-1.png" alt="A title card with the text: Fullscreen API with React"/>
+
 # Example of Fullscreen API with React
 
 - [Demo](https://example-react-fullscreen.sethcorker.com/)
+- My [article describing the Fullscreen API in a bit more detail](https://blog.sethcorker.com/fullscreen-api/)
 
 ## What is this?
 
