@@ -1,5 +1,7 @@
 # Example of Fullscreen API with React
 
+- [Demo](https://example-react-fullscreen.sethcorker.com/)
+
 ## What is this?
 
 An example of the Fullscreen API being used in React with a custom hook.

@@ -27,7 +27,15 @@ export default function MaximizableView({ children, backgroundColor }) {
       <div className="maximizable-content">{children}</div>
       <div className="maximizable-actions">
         {errorMessage ? (
-          <span>{errorMessage}</span>
+          <button
+            onClick={() =>
+              alert(
+                "Fullscreen is unsupported by this browser, please try another browser."
+              )
+            }
+          >
+            {errorMessage}
+          </button>
         ) : isFullscreen ? (
           <button onClick={handleExitFullscreen}>Exit Fullscreen</button>
         ) : (
