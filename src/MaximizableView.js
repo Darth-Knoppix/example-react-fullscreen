@@ -3,9 +3,16 @@ import useFullscreenStatus from "./utils/useFullscreenStatus";
 
 export default function MaximizableView({ children, backgroundColor }) {
   const maximizableElement = React.useRef(null);
-  const [isFullscreen, setIsFullscreen] = useFullscreenStatus(
-    maximizableElement
-  );
+  let isFullscreen, setIsFullscreen;
+  let errorMessage;
+
+  try {
+    [isFullscreen, setIsFullscreen] = useFullscreenStatus(maximizableElement);
+  } catch (e) {
+    errorMessage = "Fullscreen not supported";
+    isFullscreen = false;
+    setIsFullscreen = undefined;
+  }
 
   const handleExitFullscreen = () => document.exitFullscreen();
 
@@ -19,7 +26,9 @@ export default function MaximizableView({ children, backgroundColor }) {
     >
       <div className="maximizable-content">{children}</div>
       <div className="maximizable-actions">
-        {isFullscreen ? (
+        {errorMessage ? (
+          <span>{errorMessage}</span>
+        ) : isFullscreen ? (
           <button onClick={handleExitFullscreen}>Exit Fullscreen</button>
         ) : (
           <button onClick={setIsFullscreen}>Fullscreen</button>
