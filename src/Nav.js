@@ -22,6 +22,11 @@ export default function Nav() {
                 Page Visibility
               </a>
             </li>
+            <li>
+              <a href="https://example-react-resize-observer.sethcorker.com/">
+                Resize Observer
+              </a>
+            </li>
           </ul>
         </div>
       </div>
